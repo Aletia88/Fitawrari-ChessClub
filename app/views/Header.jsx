@@ -43,7 +43,7 @@ const Navigation = () => {
         <ul className="flex gap-7 h-fit text-white p-2 px-14 rounded-lg items-center tracking-wide">
           <li><a href="/">Home</a></li>
           <li><a href="/Membership">Membership</a></li>
-          <li><a href="/Events">Events</a></li>
+          <li><a href="/Activity">Events</a></li>
           <li><a href="/Support">Supports</a></li>
           <li><a href="/Contact">Contact Us</a></li>
         </ul>
