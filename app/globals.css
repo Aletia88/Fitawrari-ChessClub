@@ -2,32 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .anim{
+    @apply relative uppercase text-white  
   }
+  .anim::before{ 
+    @apply content-['Welcome'] absolute text-[#F4CE14] border-r-4 border-[#F4CE14] top-0 left-0 w-0 h-[100%]  overflow-hidden animate-animate
+  }
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+.container:hover .description{
+  display: block;
+  bottom: 90px;
+  transition-duration: 500ms;
+}
+.container:hover .cover{
+  background-color: white ;
+}
+.heart{
+  fill: red;
+  color:red;
+  
+}
+
+.image-slider {
+  text-align: center;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.slide-enter,
+.slide-leave-to {
+  opacity: 0;
+}
+  
+nav.stickyy {
+  padding:4px 10px;
+  background-color: #fff;
+}
+nav.stickyy li:hover{
+  border-bottom: #000 1px solid;
+  transition-duration: 300ms;
+}
+nav.stickyy p {
+  letter-spacing: 0.1em;
+}
+nav.stickyy p,
+nav.stickyy a{
+  color:#000;
+  
+}
+nav.stickyy .hor{
+  display: block;
+  color: #f4ce14;
 }
